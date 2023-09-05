@@ -20,6 +20,8 @@ it('should add a new survey', () => {
   expect(getSurveys()).toHaveLength(1)
 })
 
+//Test
+
 it('should not add a survey without a name', () => {
   const surveysCount = getSurveys().length
   expect(createSurvey()).toBeInstanceOf(Error)
