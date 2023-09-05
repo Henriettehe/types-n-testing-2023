@@ -8,6 +8,7 @@ it('should be able to run tests', () => {
    */
 })
 
+<<<<<<< Updated upstream
 it('should return new number for every call to counter', () => {
   const getNextValue = createCounter()
   const first = getNextValue()
@@ -19,6 +20,18 @@ it('should return 1 for first call after creating a counter', () => {
   const getNextValue = createCounter()
   const first = getNextValue()
   expect(first).toBe(1)
+=======
+it('should return 1 for first call after creating a counter', () => {
+  const getNextValue = createCounter()
+  const first = getNextValue()
+  expect(first).not.toBe()
+})
+
+it('should return new number for every call to counter', () => {
+  const getNextValue = createCounter()
+  const first = getNextValue()
+  expect(first).not.toBe()
+>>>>>>> Stashed changes
 })
 
 it('should return higher number for every call to counter', () => {
