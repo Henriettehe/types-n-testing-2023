@@ -15,9 +15,10 @@ interface Question {
   }
   
   export function createSurvey(name: string, questions: Question[]): Survey | Error[] {
-    if (!name) return new Error('Name is required');
-    if (typeof name !== 'string') return new Error('Name must be a string');
-    if (name.trim().length < 3) return new Error('Name must be at least 3 characters long');
+    if (!name) new Error('Name is required');
+    //Den klaget på return, fjernet return. Da det Javascript. 
+    if (typeof name !== 'string') new Error('Name must be a string');
+    if (name.trim().length < 3) new Error('Name must be at least 3 characters long');
   
     const survey: Survey = {
       name,
