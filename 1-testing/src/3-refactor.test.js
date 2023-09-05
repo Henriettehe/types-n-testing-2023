@@ -45,7 +45,7 @@ it('should not add a survey with a name that is not a string', () => {
 
 it('should not add a question that is not an object to a survey', () => {
   const name = createValidSurveyName()
-  expect(createSurvey(name, [123])).toBeInstanceOf(Error)
+  expect(createSurvey(123)).toBeInstanceOf(Error)
 
   const surveys = getSurveys()
   expect(surveys).toContainEqual({ name, questions: [] })
